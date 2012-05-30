@@ -6,3 +6,5 @@ id: "any-question"
 ---
 
 <img id="thats-all-folks" src="thats-all-folks.jpg" width="800" height="603" alt="That's all Folks ! Any question ?" />
+
+This presentation is available here : https://github.com/DjebbZ/docpad-paris-js

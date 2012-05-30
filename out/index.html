@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The slides | DocPad presentation @ ParisJS May 30th 2012</title>
+  <meta name="description" />
+  <meta name="author" />
+  <!--<link rel="stylesheet" href="/prettify.css" type="text/css">-->
+  <link rel="stylesheet" href="/solarized_light.css" type="text/css">
+  <link rel="stylesheet" href="/styles.css" type="text/css" />
+</head>
+<body class="impress-not-supported">
+<div class="fallback-message">
+  <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are
+  presented with a simplified version of this presentation.</p>
+</div>
+<div id="impress">
+  <div
+  class="step"
+  data-x=-1000
+  data-y=-1000
+  id=intro
+>
+  <div class="slide-content"><h1>DocPad</h1>
+
+<h1>Awesome static site generator</h1>
+
+<p>2012-05-30 @ParisJS</p>
+
+<p>by DjebbZ</p></div>
+</div>
+<div
+  class="step"
+  data-x=0
+  data-y=-1000
+  id=who-am-i
+>
+  <div class="slide-content"><h2>Who am I ?</h2>
+
+<h3>Khalid Jebbari</h3>
+
+<p><a href="https://github.com/DjebbZ">DjebbZ</a> on the web<br /><a href="http://twitter.com/#!/dj3bbz">@Dj3bbZ</a> (@DjebbZ was already taken...)</p>
+
+<p><a href="http://drupal.org">Drupal</a> developer for 3 years<br />(Drupal is a PHP CMS that is taking over the CMS world)</p></div>
+</div>
+<div
+  class="step"
+  data-x=1000
+  data-y=-1000
+  id=what-is-a-cms
+>
+  <div class="slide-content"><h2>CMS : Content Management System</h2>
+
+<p>All-in-one tool to build, deploy and manage a website</p>
+
+<p>ex: Wordpress, Drupal, Joomla</p></div>
+</div>
+<div
+  class="step"
+  data-x=2000
+  data-y=-1000
+  id=the-cms-problem
+>
+  <div class="slide-content"><h2>The CMS problem(s)</h2>
+
+<p>In no specific order :</p>
+
+<ol>
+<li>Complex, steep learning curve</li>
+<li>Content model proprietary and not so obvious</li>
+<li>Content prisoner of database</li>
+<li>Not very well coded…</li>
+<li>… and often written in <em>cough</em> PHP <em>cough</em></li>
+<li>Extending them is rather complex</li>
+<li>Most of them are not RESTful</li>
+<li>Front end possibilities are limited</li>
+<li>Who said performance ?</li>
+<li>Often too big for the needs</li>
+<li>Mix UX and DX (hint: <strong>it doesn't work</strong>)</li>
+<li>You become a CMS developer instead of a Web developer (not good)</li>
+<li>and so on…</li>
+</ol></div>
+</div>
+<div
+  class="step"
+  data-x=3000
+  data-y=-1000
+  id=not-enough
+>
+  <div class="slide-content"><p>It boils down to <strong>one</strong> thing :</p>
+
+<h2>Knowing HTML &amp; CSS is not enough !</h2></div>
+</div>
+<div
+  class="step"
+  data-x=4000
+  data-y=-1000
+  id=generators-to-the-rescue
+>
+  <div class="slide-content"><h2>Static site generators to the rescue</h2>
+
+<p>A simple equation :</p>
+
+<p>Layouts (HTML + CSS + Templating language)<br /><strong>+</strong><br />Content<br /><strong>=</strong><br />Final HTML output</p></div>
+</div>
+<div
+  class="step"
+  data-x=5000
+  data-y=-1000
+  id=qualities-of-generators
+>
+  <div class="slide-content"><h2>Qualities of generators</h2>
+
+<ol>
+<li>Far less complex</li>
+<li>Write layout once, then focus on content</li>
+<li>No database, no web server = less problems</li>
+<li>HTML &amp; CSS + a templating language is enough</li>
+<li>Performance is unbeatable</li>
+<li>Total control over the final markup</li>
+<li>Enough for most needs</li>
+</ol></div>
+</div>
+<div
+  class="step"
+  data-x=6000
+  data-y=-1000
+  id=docpad-to-rule-them-all
+>
+  <div class="slide-content"><h2>DocPad to rule them all</h2>
+
+<ol>
+<li>The templating/server-side language of your choice (plain HTML and CSS is fine, but also jade, eco, coffeekup, coffeescript, markdown, LESS, SASS, Stylus, Roy, even ERB or PHP !)</li>
+<li>"Real" database of content with a powerful query engine</li>
+<li>Crazy rendering system</li>
+<li>Infinite custom metadata and configuration</li>
+<li>Plugins system</li>
+<li>Not limited to blogs at all : corporate, news, portfolio, presentation, whatever</li>
+</ol></div>
+</div>
+<div
+  class="step"
+  data-x=7000
+  data-y=-1000
+  id=database-query-engine
+>
+  <div class="slide-content"><h2>A database ? A query engine ?</h2>
+
+<h2>Yes, Backbone and QueryEngine !</h2>
+
+<p>In DocPad, content is represented as Backbone Models and Collections during the render process.</p>
+
+<blockquote>
+  <p>Query-Engine provides extensive Querying, Filtering, and Searching abilities for Backbone.js Collections as well as JavaScript arrays and objects</p>
+</blockquote>
+
+<p>QueryEngine supports <a href="http://www.mongodb.org/display/DOCS/Advanced+Queries">NoSQL queries</a>. Cool.</p></div>
+</div>
+<div
+  class="step"
+  data-x=8000
+  data-y=-1000
+  id=queryengine-example
+>
+  <div class="slide-content"><h2>QueryEngine in DocPad example</h2>
+
+<p>Display posts title sorted by date (code in <a href="https://github.com/sstephenson/eco">eco</a>)</p>
+
+<pre><code>
+<% for post in @database.findAll(layout: 'post').sortArray(date:-1) : %>
+  <div class="title"><%= post.title %></div>
+<% end %>
+</code></pre></div>
+</div>
+<div
+  class="step"
+  data-x=9000
+  data-y=-1000
+  id=crazy-rendering-system
+>
+  <div class="slide-content"><h2>Crazy rendering system ? (1/2)</h2>
+
+<p>Documents rendered based on extensions :</p>
+
+<ul>
+<li>index.html.md => Markdown to HTML => index.html</li>
+<li>mypage.html.md.eco => ECO to Markdown to HTML => mypage.html</li>
+<li>app.js.coffee => CoffeeScript to Javascript => app.js</li>
+</ul>
+
+<p>Example from this presentation's <em>default.html.eco</em></p>
+
+<pre><code>
+&lt;title&gt;<%= @document.title %> | <%= @site.name %>&lt;/title&gt;
+</code></pre></div>
+</div>
+<div
+  class="step"
+  data-x=10000
+  data-y=-1000
+  id=crazy-rendering-system-2
+>
+  <div class="slide-content"><h2>Crazy rendering system ? (2/2)</h2>
+
+<p>This works too :</p>
+
+<ul>
+<li>styles.css.styl.eco => Dynamically create CSS rules based on content or configuration<br>
+ex: custom colors, css grid, dynamic id...</li>
+<li>app.js.eco => Dynamically generate js code<br>
+ex: call custom code based on html id's (I did it !)</li>
+<li>.htaccess.eco => Dynamically create redirect rules based on content or configuration<br>
+Yes we can</li>
+</ul>
+
+<p><em>Possibilities are endless</em></p></div>
+</div>
+<div
+  class="step"
+  data-x=11000
+  data-y=-1000
+  id=demo
+>
+  <div class="slide-content"><h2>Demo</h2>
+
+<p>Let's view this presentation's code !</p>
+
+<p>Check-list :</p>
+
+<ul>
+<li>documents, metadata</li>
+<li>layouts</li>
+<li>partials</li>
+<li>docpad.cson</li>
+<li>adding a new slide</li>
+</ul></div>
+</div>
+<div
+  class="step"
+  data-x=12000
+  data-y=-1000
+  id=credits
+>
+  <div class="slide-content"><h2>Credits and thanks</h2>
+
+<p><a href="http://parisjs.org/">Paris.js</a> for hosting the event</p>
+
+<p><a href="http://balupton.com/">Benjamin Lupton</a> for creating DocPad</p>
+
+<p><a href="http://drupal.org">Drupal</a> and its community for teaching me a lot about CMS</p>
+
+<p><a href="http://bartaz.github.com/impress.js">Impress.js</a>, the tool used to create this presentation</p>
+
+<p>GrandChaos600 for the <a href="http://www.dafont.com/thats-font-folks.font">That's all Folks font</a> (next slide)</p>
+
+<p><a href="http://www.warnerbros.com/">Warner Bros</a> for the Looney Toons image (next slide)</p></div>
+</div>
+<div
+  class="step"
+  data-x=13000
+  data-y=-1000
+  id=any-question
+>
+  <div class="slide-content"><p><img id="thats-all-folks" src="thats-all-folks.jpg" width="800" height="603" alt="That's all Folks ! Any question ?" /></p></div>
+</div>
+
+</div>
+<script src="/impress.js" type="text/javascript"></script>
+<!--<script src="/prettify.js" type="text/javascript"></script>-->
+<script src="/highlight.pack.js" type="text/javascript"></script>
+<script src="/ready.js" type="text/javascript"></script>
+<script src="/script.js" type="text/javascript"></script>
+</body>
+</html>

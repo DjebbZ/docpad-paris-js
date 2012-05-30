@@ -1,0 +1,8 @@
+<div
+  class="step"
+  <%="data-x=#{@document.dataX}" if @document.dataX %>
+  <%="data-y=#{@document.dataY}" if @document.dataY %>
+  <%="id=#{@document.id}" if @document.id %>
+>
+  <div class="slide-content"><%- @content %></div>
+</div>

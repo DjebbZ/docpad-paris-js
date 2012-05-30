@@ -1,0 +1,8 @@
+{
+  # =================================
+  # Template Data
+  # These are variables that will be accessible via our templates
+  templateData:
+    site:
+      name: 'DocPad presentation @ ParisJS May 30th 2012'
+}
